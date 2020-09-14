@@ -1,8 +1,7 @@
-<?php $this->title = "Accueil"; ?>
-
 <h1>Mon blog</h1>
 <p>En construction</p>
-<a href="../public/index.php?route=addArticle">Nouvel article</a>
+<?= $this->session->show('add_article'); ?>
+<p><a href="../public/index.php?route=addArticle">Nouvel article</a></p>
 <?php
 foreach ($articles as $article)
 {
