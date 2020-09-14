@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 432c319a4edb04afd633519734cc9e35ff39f710
 <?php $this->title = "Nouvel article"; ?>
 <h1>Mon blog</h1>
 <p>En construction</p>
