@@ -161,6 +161,24 @@ class BackController extends Controller
         }
     }
 
+    public function promoteUser($userId)
+    {
+        if($this->checkAdmin()) {
+            $this->userDAO->promoteUser($userId);
+            $this->session->set('promote_user', 'L\'utilisateur a bien été promu');
+            header('Location: ../public/index.php?route=administration');
+        }
+    }
+
+    public function destituteUser($userId)
+    {
+        if($this->checkAdmin()) {
+            $this->userDAO->destituteUser($userId);
+            $this->session->set('destitute_user', 'L\'utilisateur n\'est plus autorisé à écrire d\'article');
+            header('Location: ../public/index.php?route=administration');
+        }
+    }
+
     private function logoutOrDelete($param)
     {
         $this->session->stop();

@@ -8,6 +8,8 @@
 <?= $this->session->show('unflag_comment'); ?>
 <?= $this->session->show('delete_comment'); ?>
 <?= $this->session->show('delete_user'); ?>
+<?= $this->session->show('promote_user'); ?>
+<?= $this->session->show('destitute_user'); ?>
 <h2>Articles</h2>
 <a href="../public/index.php?route=addArticle">Nouvel article</a>
 <table>
@@ -89,7 +91,9 @@
                 <?php
                 if($user->getRole() != 'admin') {
                 ?>
-                <a href="../public/index.php?route=deleteUser&userId=<?= $user->getId(); ?>">Supprimer</a>
+                <input type="button" value="Supprimer l'utilisateur"  onclick='window.location.assign("../public/index.php?route=deleteUser&userId=<?= $user->getId(); ?>")'/>
+                <input type="button" value="autoriser l'écriture d'article"  onclick='window.location.assign("../public/index.php?route=promoteUser&userId=<?= $user->getId(); ?>")'/>
+                <input type="button" value="interdire l'écriture d'article"  onclick='window.location.assign("../public/index.php?route=destituteUser&userId=<?= $user->getId(); ?>")'/>
                 <?php }
                 else {
                     ?>
