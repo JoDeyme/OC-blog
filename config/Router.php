@@ -72,6 +72,12 @@ class Router
                 elseif($route === 'deleteUser'){
                     $this->backController->deleteUser($this->request->getGet()->get('userId'));
                 }
+                elseif($route === 'promoteUser'){
+                    $this->backController->promoteUser($this->request->getGet()->get('userId'));
+                }
+                elseif($route === 'destituteUser'){
+                    $this->backController->destituteUser($this->request->getGet()->get('userId'));
+                }
                 elseif($route === 'administration'){
                     $this->backController->administration();
                 }
