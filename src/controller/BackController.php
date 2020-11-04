@@ -176,6 +176,7 @@ class BackController extends Controller
             $this->userDAO->destituteUser($userId);
             $this->session->set('destitute_user', 'L\'utilisateur n\'est plus autorisé à écrire d\'article');
             header('Location: ../public/index.php?route=administration');
+
         }
     }
 
@@ -189,5 +190,11 @@ class BackController extends Controller
             $this->session->set($param, 'Votre compte a bien été supprimé');
         }
         header('Location: ../public/index.php');
+    }
+    public function about()
+    {
+            return $this->view->render('about', [
+            ]);   
+    
     }
 }

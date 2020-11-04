@@ -80,6 +80,9 @@ class Router
                 }
                 elseif($route === 'administration'){
                     $this->backController->administration();
+                }            
+                elseif($route === 'about'){
+                    $this->backController->about();
                 }
                 else{
                     $this->errorController->errorNotFound();

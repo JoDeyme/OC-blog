@@ -1,13 +1,24 @@
-<?php $this->title = 'Modifier mot mot de passe'; ?>
-<h1>Mon blog</h1>
-<p>En construction</p>
-<div>
-    <p>Le mot de passe de <?= $this->session->get('pseudo'); ?> sera modifié</p>
-    <form method="post" action="../public/index.php?route=updatePassword">
-        <label for="password">Mot de passe</label><br>
-        <input type="password" id="password" name="password"><br>
-        <input type="submit" value="Mettre à jour" id="submit" name="submit">
-    </form>
+ <?php $this->title = 'Modifier mot de passe'; ?>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Modifier le mot de passe</h5>
+            <form method="post" action="../public/index.php?route=updatePassword"  >
+            <div class="form-label-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" class="form-control" value="Mettre à jour"><br>
+            </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Connexion" id="submit" name="submit">Valider</button>
+            </form>
+          </div>
+        </div>
+    </div>
 </div>
-<br>
+
+        <br>
 <a href="../public/index.php">Retour à l'accueil</a>
