@@ -1,5 +1,7 @@
 # OC-blog
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/d95a42bc805a951d472c/maintainability)](https://codeclimate.com/github/JoDeyme/OC-blog/maintainability)
+
 # Projet 5 : Créez votre premier blog en PHP
 
 ## Prérequis
