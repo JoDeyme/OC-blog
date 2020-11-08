@@ -9,10 +9,10 @@
     <h3><p>Niveau de droit sur le blog : <?= $this->session->get('role'); ?></h3>
     <div class="row">
         <div class="col-md-6">
-        <input type="button" class="btn btn-primary" value="Modifier mon mot de passe" onclick='window.location.assign("../public/index.php?route=updatePassword")'/>
+            <a class="btn btn-primary" href="../public/index.php?route=updatePassword">Modifier mon mot de passe</a>
         </div>
         <div class="col-md-6">
-        <input type="button" class="btn btn-danger" value="Supprimer mon compte" onclick='window.location.assign("../public/index.php?route=deleteAccount")'/>
+            <a class="btn btn-danger" href="../public/index.php?route=deleteAccount">Supprimer mon compte</a>
         </div>
     </div>
 </div>
